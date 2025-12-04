@@ -27,15 +27,14 @@ async function generateImage() {
     document.getElementById("result").innerHTML = "<p>Generating...</p>";
 
     const response = await fetch(
-        "http://localhost:3000/generate" + API_KEY,
-        {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                prompt: { text: finalPrompt }
-            })
-        }
-    );
+    "http://localhost:3000/generate",
+    {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: finalPrompt })
+    }
+);
+
 
     const data = await response.json();
 
