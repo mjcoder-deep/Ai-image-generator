@@ -27,13 +27,14 @@ async function generateImage() {
     document.getElementById("result").innerHTML = "<p>Generating...</p>";
 
     const response = await fetch(
-    "http://localhost:3000/generate",
+    "https://ai-backend-vt8h.onrender.com/generate",
     {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: finalPrompt })
     }
 );
+
 
 
     const data = await response.json();
