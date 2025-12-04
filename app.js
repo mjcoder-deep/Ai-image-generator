@@ -27,7 +27,7 @@ async function generateImage() {
     document.getElementById("result").innerHTML = "<p>Generating...</p>";
 
     const response = await fetch(
-        "https://generativelanguage.googleapis.com/v1beta/models/imagetext:generate?key=" + API_KEY,
+        "http://localhost:3000/generate" + API_KEY,
         {
             method: "POST",
             headers: { "Content-Type": "application/json" },
